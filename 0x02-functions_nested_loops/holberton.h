@@ -1,12 +1,11 @@
-#ifndef holberton_h
-#define holberton_h
+#ifndef HOLBERTON_H
+#define HOLBERTON_H
 
 /**
 * Library Holberton.h
 * Contains all Holberton type functions
 * Required at 0x02. C - Functions, nested loops
 */
-
 
 int _putchar(char c);
 void print_alphabet(void);
