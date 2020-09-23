@@ -4,20 +4,6 @@
 #include <stdio.h>
 
 /**
-* Library Holberton.h
-* Contains all Holberton type functions
-* Required at 0x02. C - Functions, nested loops
-*/
-
-void positive_or_negative(int i);
-int largest_number(int a, int b, int c);
-File Edit Options Buffers Tools C Help
-#ifndef HOLBERTON_H
-#define HOLBERTON_H
-
-#include <stdio.h>
-
-/**
  * Library Holberton.h
  * Contains all Holberton type functions
  * Required at 0x02. C - Functions, nested loops
