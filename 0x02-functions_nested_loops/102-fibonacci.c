@@ -5,7 +5,7 @@
 * Return: 0
 */
 
-int mnumin(void)
+int main(void)
 {
 int count;
 unsigned long num = 0, next = 1, sum;
