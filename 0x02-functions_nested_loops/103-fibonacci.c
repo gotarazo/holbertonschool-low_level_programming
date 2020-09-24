@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
-* main- Fibonacci sequence whose values do not exceed 4,000,000
+* main- Fibonacci sequence whose even values do not exceed 4,000,000
 * Return: 0
 */
 
