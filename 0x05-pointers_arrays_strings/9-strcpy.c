@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
-* _strcpy- copies the string pointed to by src, including (\0)
+* _strcpy- copies the string pointed to by src, including terminating null byte
 * to the buffer pointed to by dest
 * @dest: pointer to destination of string
 * @src: pointer to source string to copy from
@@ -10,12 +10,11 @@
 
 char *_strcpy(char *dest, char *src)
 {
-int point = 0;
+int point;
 
-while (src[point])
-{
+for (point = 0; src[point] != '\0'; point++)
 dest[point] = src[point];
-point++;
-}
+dest[point] = '\0';
 return (dest);
 }
+
