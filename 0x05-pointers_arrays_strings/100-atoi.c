@@ -22,5 +22,7 @@ n = (n * 10) + (*s - '0');
 else if (n > 0)
 break;
 }
-return (sig * n);
+if (sig < 0)
+n = (-n);
+return (n);
 }
