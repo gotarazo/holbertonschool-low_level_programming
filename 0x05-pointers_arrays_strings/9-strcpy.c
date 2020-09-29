@@ -10,9 +10,12 @@
 
 char *_strcpy(char *dest, char *src)
 {
-char *point = dest;
+int point = 0;
 
-while (*src)
-*dest++ = *src++;
-return (point);
+while (src[point])
+{
+dest[point] = src[point];
+point++;
+}
+return (dest);
 }
