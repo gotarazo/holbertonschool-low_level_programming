@@ -13,5 +13,5 @@ int count;
 
 for (count = 0; (s1[count] == s2[count]) && (s1[count] != '\0'); count++)
 ;
-return (*s1 - *s2);
+return (s1[count] - s2[count]);
 }
