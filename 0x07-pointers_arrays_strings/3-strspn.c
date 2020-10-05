@@ -7,13 +7,13 @@
 * Return: Lenght in bytes
 */
 
-
 unsigned int _strspn(char *s, char *accept)
 {
 unsigned int count = 0;
 
 while (*s && _strchr(accept, *s++))
+{
 count++;
-
+}
 return (count);
 }
