@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include "2-strchr.c"
 
 /**
 * _strpbrk- Searches a string for any of a set of bytes
