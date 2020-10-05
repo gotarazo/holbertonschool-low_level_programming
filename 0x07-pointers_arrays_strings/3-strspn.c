@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include "2-strchr.c"
 
 /**
 * _strspn- Gets the length of a prefix substring
@@ -12,8 +13,7 @@ unsigned int _strspn(char *s, char *accept)
 unsigned int count = 0;
 
 while (*s && _strchr(accept, *s++))
-{
 count++;
-}
+
 return (count);
 }
