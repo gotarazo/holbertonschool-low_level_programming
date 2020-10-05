@@ -15,5 +15,5 @@ while (*s)
 if (_strchr(accept, *s++))
 return (--s);
 }
-return (0);
+return ('\0');
 }
