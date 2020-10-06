@@ -9,7 +9,7 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-unsigned int coun1, count2;
+unsigned int count1, count2;
 
 if (needle[0] == '\0')
 return (haystack);
