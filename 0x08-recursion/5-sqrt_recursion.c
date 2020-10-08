@@ -9,13 +9,16 @@
 
 int sqrt(int n, int m)
 {
+if (n == 0)
+return (0);
+
 if (n == 1)
 return (1);
 
 if (m * m == n)
 return (m);
 
-if ((m == n / 2) || n < 0)
+if ((m > n / 2) || n < 0)
 return (-1);
 
 return (sqrt(n, m + 1));
