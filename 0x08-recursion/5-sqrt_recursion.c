@@ -15,7 +15,7 @@ return (m);
 else
 {
 if (m * m >= 0)
-return (find_sqrt(m + 1, n));
+return (sqrt(m + 1, n));
 
 else
 return (-1);
