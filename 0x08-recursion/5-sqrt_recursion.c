@@ -1,13 +1,13 @@
 #include "holberton.h"
 
 /**
-* sqrt- Square root of n
+* _sqrt- Square root of n
 * @n: Number
 * @m: Posible square
 * Return: Square (-1 If n does not have a natural square root)
 */
 
-int sqrt(int m, int n)
+int _sqrt(int m, int n)
 {
 if (m * m == n)
 return (m);
@@ -15,7 +15,7 @@ return (m);
 else
 {
 if (m * m >= 0)
-return (sqrt(m + 1, n));
+return (_sqrt(m + 1, n));
 
 else
 return (-1);
@@ -30,5 +30,5 @@ return (-1);
 
 int _sqrt_recursion(int n)
 {
-return (sqrt(0, n));
+return (_sqrt(0, n));
 }
