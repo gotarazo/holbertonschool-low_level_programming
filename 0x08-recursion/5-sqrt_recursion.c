@@ -7,21 +7,19 @@
 * Return: Square (-1 If n does not have a natural square root)
 */
 
-int sqrt(int n, int m)
+int sqrt(int m, int n)
 {
-if (n == 0)
-return (0);
-
-if (n == 1)
-return (1);
-
 if (m * m == n)
 return (m);
 
-if ((m > n / 2) || n < 0)
-return (-1);
+else
+{
+if (m * m >= 0)
+return (find_sqrt(m + 1, n));
 
-return (sqrt(n, m + 1));
+else
+return (-1);
+}
 }
 
 /**
@@ -32,5 +30,5 @@ return (sqrt(n, m + 1));
 
 int _sqrt_recursion(int n)
 {
-return (sqrt(n, 0));
+return (sqrt(0, n));
 }
