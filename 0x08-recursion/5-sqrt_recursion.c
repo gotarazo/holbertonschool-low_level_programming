@@ -12,7 +12,7 @@ int sqrt(int n, int m)
 if (m * m < n)
 m = sqrt(n, m + 1);
 
-if (m * m > n)
+if (m *m > n)
 return (-1);
 
 return (m);
