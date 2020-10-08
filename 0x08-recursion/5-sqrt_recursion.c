@@ -9,13 +9,16 @@
 
 int sqrt(int n, int m)
 {
-if (m * m < n)
-m = sqrt(n, m + 1);
+if (n == 1)
+return (1);
 
-else if (m * m > n)
+if (m * m == n)
+return (m);
+
+if ((m == n / 2) || n < 0)
 return (-1);
 
-return (m);
+return (sqrt(n, m + 1));
 }
 
 /**
@@ -26,5 +29,5 @@ return (m);
 
 int _sqrt_recursion(int n)
 {
-return (sqrt(n, 1));
+return (sqrt(n, 0));
 }
