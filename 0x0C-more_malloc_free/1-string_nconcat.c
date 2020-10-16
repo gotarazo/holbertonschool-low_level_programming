@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -26,7 +25,7 @@ for (x = 0; s2[x] != '\0'; x++)
 if (n >= x)
 n = x;
 
-c = malloc(siyeof(*c) * (w + n + 1));
+c = malloc(sizeof(*c) * (w + n + 1));
 if (c == NULL)
 return (NULL);
 for (y = 0; y < w; y++)
