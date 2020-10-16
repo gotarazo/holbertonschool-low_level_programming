@@ -1,11 +1,12 @@
 #include "holberton.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
 * string_nconcat- Concatenates two strings
 *@s1: String 1
 *@s2: String 2
-*@n: length of s2 then use the entire string s2
+*@n: Length of s2 then use the entire string s2
 *Return: The new string
 */
 
