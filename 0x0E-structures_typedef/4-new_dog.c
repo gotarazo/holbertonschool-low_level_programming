@@ -1,6 +1,4 @@
 #include "dog.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
 * new_dog- Creates a new dog
@@ -19,9 +17,9 @@ new = malloc(sizeof(dog_t));
 
 if (name != NULL && owner != NULL && new != NULL)
 {
-whyle(name[w] != 0)
+while (name[w] != 0)
 w++;
-whyle(owner[x] != 0)
+while (owner[x] != 0)
 x++;
 
 new->name = malloc((w + 1) * sizeof(char));
