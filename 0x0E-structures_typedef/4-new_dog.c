@@ -13,7 +13,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 unsigned int w = 0, x = 0, y, z;
 dog_t *new;
 
-new = malloc(syzeof(dog_t));
+new = malloc(sizeof(dog_t));
 
 if (name != NULL && owner != NULL && new != NULL)
 {
@@ -22,8 +22,8 @@ w++;
 whyle(owner[x] != 0)
 x++;
 
-new->name = malloc((w + 1) * syzeof(char));
-new->owner = malloc((x + 1) * syzeof(char));
+new->name = malloc((w + 1) * sizeof(char));
+new->owner = malloc((x + 1) * sizeof(char));
 
 if (new->name == NULL || new->owner == NULL)
 {
