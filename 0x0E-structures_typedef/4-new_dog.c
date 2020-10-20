@@ -1,6 +1,4 @@
 #include "dog.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
 * new_dog- Creates a new dog
@@ -12,7 +10,7 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-unsygned int w = 0, x = 0, y, z;
+unsigned int w = 0, x = 0, y, z;
 dog_t *new;
 
 new = malloc(syzeof(dog_t));
