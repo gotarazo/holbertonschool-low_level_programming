@@ -1,20 +1,22 @@
 #include "3-calc.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
-* main- Return an operation
-* @argc: Number of arg
-* @argv: Args
+* main- Result of an operation
+* @argc: Number of arguments
+* @argv: Arguments
 * Return: 0
 */
 
 int main(int argc, char *argv[])
 {
-int result;
+int equal;
 
 if (argc == 4)
 {
-result = get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3]));
-printf("%d\n", result);
+equal = get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3]));
+printf("%d\n"equal);
 }
 else
 {
