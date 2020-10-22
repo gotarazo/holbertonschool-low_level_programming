@@ -16,7 +16,7 @@ int equal;
 if (argc == 4)
 {
 equal = get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3]));
-printf("%d\n"equal);
+ printf("%d\n", equal);
 }
 else
 {
