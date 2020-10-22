@@ -9,26 +9,17 @@
 
 int main(int argc, char *argv[])
 {
-int a, b;
-int func;
+int result;
 
 if (argc == 4)
 {
-a = atoi(argv[1]);
-b = atoi(argv[3]);
-
-if ((*argv[2] == '%' || *argv[2] == '/') && b == 0)
-{
-printf("Error\n");
-exit(100);
-}
-func = get_op_func(argv[2])(a, b);
-printf("%d\n", func);
-return (0);
+result = get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3]));
+printf("%d\n", result);
 }
 else
 {
 printf("Error\n");
 exit(98);
 }
+return (0);
 }
