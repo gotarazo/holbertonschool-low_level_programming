@@ -20,7 +20,7 @@ for (i = 0; i < n; i++)
 {
 printf("%d", va_arg(ints, int));
 
-if (ints != (n - 1) && separator != NULL)
+if (i != (n - 1) && separator != NULL)
 printf("%s", separator);
 }
 va_end(ints);
