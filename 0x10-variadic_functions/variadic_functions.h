@@ -4,15 +4,15 @@
 #include <stdarg.h>
 
 /**
- * struct PrintFormat- Function that matches the @format
- * @format: Format that argument should be printed
- * @function: Function associated with @format
- */
+* struct PrintFormat- Function that matches the @format
+* @format: Format that argument should be printed
+* @function: Function associated with @format
+*/
 
 typedef struct PrintFormat
 {
-  char *form;
-  void (*prnt)(va_list);
+char *form;
+void (*prnt)(va_list);
 } PrintFormat_t;
 
 int _putchar(char);
