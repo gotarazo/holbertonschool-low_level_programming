@@ -14,6 +14,8 @@ va_list ints;
 unsigned int i;
 int sum = 0;
 
+if (n != 0)
+{
 va_start(ints, n);
 
 for (i = 0; i < n; i++)
@@ -22,4 +24,6 @@ sum += va_arg(ints, int);
 va_end(ints);
 
 return (sum);
+}
+return (0);
 }
