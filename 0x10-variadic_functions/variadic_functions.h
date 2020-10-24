@@ -11,10 +11,11 @@
 
 typedef struct PrintFormat
 {
-  char *format;
-  void (*function)(va_list);
+  char *form;
+  void (*prnt)(va_list);
 } PrintFormat_t;
 
+int _putchar(char);
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
