@@ -10,7 +10,7 @@
 void print_all(const char * const format, ...)
 {
 va_list args;
-int i = 0, j = 1;
+ unsigned int i = 0, j;
 char *str;
 
 while (format)
@@ -18,6 +18,7 @@ while (format)
 va_start(args, format);
 while (format[i])
 {
+j = 1;
 switch (format[i])
 {
 case 'c':
