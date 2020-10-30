@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
 
 /**
 * print_list- Prints all the elements of a list
@@ -16,7 +15,7 @@ while (h)
 if (!h->str)
 printf("[0] (nil)\n");
 else
-printf("[%d] %s\n", h->len, h->str);
+printf("[%i] %s\n", h->len, h->str);
 
 h = h->next;
 n++;
