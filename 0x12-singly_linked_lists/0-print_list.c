@@ -13,7 +13,7 @@ int n = 0;
 while (h)
 {
 if (h->str == NULL)
-printf("[0] (nil)\n");
+printf("[%i] (nil)\n", h->len);
 
 else
 printf("[%i] %s\n", h->len, h->str);
