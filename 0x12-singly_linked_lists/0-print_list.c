@@ -12,11 +12,11 @@ int n = 0;
 
 while (h)
 {
-if (h->str == NULL)
-printf("[%i] (nil)\n", h->len);
-
+printf("[%u] ", h->len);
+if (!h->str)
+printf("(nil)\n");
 else
-printf("[%i] %s\n", h->len, h->str);
+printf("%s\n", h->str);
 
 h = h->next;
 n++;
