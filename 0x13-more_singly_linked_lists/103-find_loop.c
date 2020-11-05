@@ -6,8 +6,6 @@
 * Return: adv1, address of node where the loop starts or NULL if no loop
 */
 
-
-
 listint_t *find_listint_loop(listint_t *head)
 {
 listint_t *adv1 = head, *adv2 = head;
