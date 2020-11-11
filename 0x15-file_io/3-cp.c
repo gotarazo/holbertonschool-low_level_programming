@@ -25,7 +25,7 @@ file = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 if (file < 0)
 dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 do {
-len = read(count, buf, 1024);
+len = read(n, buf, 1024);
 format = write(file, buf, len);
 } while (len == 1024);
 
