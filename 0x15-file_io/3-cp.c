@@ -2,38 +2,44 @@
 
 /**
 * main- Copies the contents of a file to another file
-* @ac: Number of arguments passed to program
-* @av: Array of variables, names of file to read and new file
+* @argc: Number of arguments passed to program
+* @argv: Array of variables, names of file to read and new file
 * Return: 0 on success. Exit on error.
 */
 
-int main(int ac, char **av)
+int main(int argc, char *argv[])
 {
-char buff[1024];
-int from, to, len;
+int file, n, len, format;
+char buf[1024];
 
-if (ac != 3)
-er1(97, "Usage: cp from to");
+if (argc != 3)
+dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 
-from = open(av[1], O_RDONLY);
-if (from == -1)
-er2(98, "Error: Can't read from file", av[1]);
-
-to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 00664);
-if (to == -1)
-er2(99, "Error: Can't write to", av[2]);
-
-while ((len = read(from, buff, 1024)) > 0)
+n = open(argv[1], O_RDONLY);
+if (n < 0)
 {
-if ((write(to, buff, len)) == -1)
-er2(99, "Error: Can't write to", av[2]);
+dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+exit(98);
 }
-if (len == -1)
-er2(98, "Error: Can't read from file", av[1]);
-if (close(from) == -1)
-er3(100, "Error: Can't close fd", from);
-if (close(to) == -1)
-er3(100, "Error: Can't close fd", to);
+file = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+if (file < 0)
+dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+do {
+len = read(count, buf, 1024);
+format = write(file, buf, len);
+} while (len == 1024);
 
+if (len < 0)
+dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
+
+argv[1]), exit(98);
+if (format < 0)
+dprintf(STDERR_FILENO, "Error: Can't write to %s\n",
+
+argv[2]), exit(99);
+if (close(n) < 0)
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", n), exit(100);
+if (close(file) < 0)
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file), exit(100);
 return (0);
 }
