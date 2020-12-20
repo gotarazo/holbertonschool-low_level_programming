@@ -9,8 +9,7 @@
 
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-listint_t *aux = NULL, *new = NULL;
-aux = *head;
+listint_t *aux = *head, *new = NULL;
 
 if (aux)
 {
