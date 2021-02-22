@@ -3,7 +3,7 @@
 
 
 def island_perimeter(grid):
-    """Return the perimiter of an island, represents water by 0 and land by 1"""
+    """Return perimiter of island (represents water by 0 and land by 1)"""
     width = len(grid[0])
     height = len(grid)
     edges = 0
